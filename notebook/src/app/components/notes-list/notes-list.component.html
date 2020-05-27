@@ -1,0 +1,25 @@
+<h1>Notes list</h1>
+<div class="container alert alert-warning" *ngIf="!notes.length">No notes found</div>
+<div class="container" *ngIf="notes.length">
+    <table class="table">
+        <thead>
+            <tr>
+                <th width="75%">Notatka</th>
+                <th width="25%">Data wprowadzenia</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of notes">
+                <td height="200px">{{note.content}}</td>
+                <td>{{note.created}}</td>
+                <td><button (click)="editNote(note.id)"class="btn btn-primary">EDIT</button></td>
+                <td><button (click)="deleteNote(note.id)" class="btn btn-danger">DELETE</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <button class="btn-success btn" (click)="addNote()">ADD NOTE</button>
+</div>

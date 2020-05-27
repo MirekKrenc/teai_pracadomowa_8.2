@@ -19,7 +19,7 @@ public class InitialData implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        noteRepository.save(new Note("Pierwsza notatka", LocalDate.now()));
-        noteRepository.save(new Note("Druga notatka", LocalDate.now()));
+        noteRepository.save(new Note("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lorem nec leo sollicitudin luctus. Quisque dictum et turpis a volutpat. Praesent scelerisque nunc vitae nulla mollis, et sagittis nec.", LocalDate.now()));
+        noteRepository.save(new Note("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lorem nec leo sollicitudin luctus. Quisque dictum et turpis a volutpat. Praesent scelerisque nunc vitae nulla mollis, et sagittis nec.", LocalDate.now()));
     }
 }

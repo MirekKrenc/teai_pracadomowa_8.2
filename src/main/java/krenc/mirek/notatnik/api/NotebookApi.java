@@ -16,6 +16,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/notes")
+@CrossOrigin(origins = "http://localhost:4200")
 public class NotebookApi {
 
     private NoteRepository noteRepository;
